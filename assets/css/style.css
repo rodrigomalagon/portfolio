@@ -946,6 +946,15 @@ main {
   font-weight: var(--fw-300);
 }
 
+.project-description-text {
+  margin-left: 10px; 
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
+}
+
+
 
 
 

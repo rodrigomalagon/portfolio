@@ -5,7 +5,7 @@ This repository contains a personal customizaion of the vCard portfolio, develop
 
 ## Credits
 
-This project is based on [CodeWithSadee's vCard portfolio repository](https://github.com/codewithsadee/vcard-personal-portfolio), which is licensed under the MIT License. Modifications were made to this repository to add personal features and customization.
+This project is based on [CodeWithSadee's vCard](https://github.com/codewithsadee/vcard-personal-portfolio), which is licensed under the MIT License. Modifications were made to this repository to add personal features and customization.
 
 
 ## License

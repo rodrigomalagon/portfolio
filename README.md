@@ -1,6 +1,7 @@
 # Personal vCard portfolio
 
 This repository contains a personal customizaion of the vCard portfolio, developed by [CodeWithSadee](https://github.com/codewithsadee). It is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+The deployment of this web portfolio is accessible [here](https://rodrigomalagon.github.io/portfolio/).
 
 
 ## Credits

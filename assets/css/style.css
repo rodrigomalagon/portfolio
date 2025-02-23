@@ -158,9 +158,6 @@ html { font-family: var(--ff-poppins); }
 body { background: var(--smoky-black); }
 
 
-
-
-
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -207,6 +204,11 @@ article {
 }
 
 .icon-box ion-icon { --ionicon-stroke-width: 35px; }
+
+.icon-image {
+  filter: brightness(0) saturate(100%) invert(49%) sepia(43%) saturate(285%) hue-rotate(144deg) brightness(90%) contrast(92%);
+}
+
 
 article { display: none; }
 
@@ -1312,10 +1314,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * #ABOUT
    */
-
-  .icon {
-    filter: brightness(0) saturate(100%) invert(49%) sepia(43%) saturate(285%) hue-rotate(144deg) brightness(90%) contrast(92%);
-  }
 
   .about .article-title { margin-bottom: 20px; }
 

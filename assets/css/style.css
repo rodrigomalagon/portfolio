@@ -64,6 +64,8 @@
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --light-blue: hsl(202, 100%, 72%);
+  --light-purple: rgb(202, 96, 202);
+  --strong-blue: hsl(227, 100%, 72%);
   --vegas-gold: hsl(47, 90%, 69%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
@@ -125,11 +127,31 @@
   box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+/* Unvisited link */
+a {
+  color: var(--light-blue);
+  text-decoration: none; /* Removes underline */
+}
+
+/* Visited link */
+a:visited {
+  color: var(--light-purple);
+}
+
+/* Hover (when mouse is over the link) */
+a:hover {
+  color: var(--strong-blue);
+  text-decoration: underline;
+}
+
+/* Active (while clicking) */
+a:active {
+  color: orange;
+}
 
 li { list-style: none; }
 
-img, ion-icon, a, button, time, span { display: block; }
+img, ion-icon, button, time, span { display: block; }
 
 button {
   font: inherit;

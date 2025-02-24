@@ -21,6 +21,24 @@
    * colors
    */
 
+  /* solid */
+
+  --jet: hsl(0, 0%, 22%);
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+  --light-blue: hsl(193, 60%, 61%);
+  --strong-blue: hsl(218, 37%, 45%);
+  --light-purple: hsl(254, 98%, 83%);
+  --strong-purple: hsl(254, 100%, 72%);
+  --vegas-gold: hsl(47, 90%, 69%);
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
+
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
@@ -53,23 +71,16 @@
     hsl(45, 100%, 72%), 
     hsl(35, 100%, 68%)
   );
-
-  /* solid */
-
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --light-blue: hsl(202, 100%, 72%);
-  --light-purple: rgb(202, 96, 202);
-  --strong-blue: hsl(227, 100%, 72%);
-  --vegas-gold: hsl(47, 90%, 69%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --text-gradient-blue: linear-gradient(
+    to right, 
+    var(--strong-blue),
+    var(--light-blue)
+  );
+  --text-gradient-purple: linear-gradient(
+    to right, 
+    var(--light-purple),
+    var(--strong-purple)
+  );
 
   /**
    * typography
@@ -355,9 +366,11 @@ main {
   gap: 15px;
 }
 
-.avatar-box {
+
+.avatar-box img {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 10%;
+  border: 2px solid var(--strong-blue); /* Adds a border */
 }
 
 .info-content .name {
@@ -673,14 +686,6 @@ main {
 
 .modal-close-btn ion-icon { --ionicon-stroke-width: 50px; }
 
-.modal-avatar-box {
-  background: var(--bg-gradient-onyx);
-  width: max-content;
-  border-radius: 14px;
-  margin-bottom: 15px;
-  box-shadow: var(--shadow-2);
-}
-
 .modal-img-wrapper > img { display: none; }
 
 .modal-title { margin-bottom: 4px; }
@@ -740,7 +745,7 @@ main {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  color: var(--light-blue);
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
@@ -762,7 +767,7 @@ main {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-blue);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
@@ -772,6 +777,8 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
+
+.timeline .icon-box {color: var(--light-purple);}
 
 
 /**
@@ -799,14 +806,14 @@ main {
 }
 
 .skill-progress-bg {
-  background: var(--jet);
+  background: var(--li);
   width: 100%;
   height: 8px;
   border-radius: 10px;
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: var(--text-gradient-blue);
   height: 100%;
   border-radius: inherit;
 }
@@ -1259,7 +1266,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: 18px;
   }
 
-  .icon-box:hover {
+  .icon-box:hover:has(a) {
     transform: scale(1.1); /* Slightly expand */
   }
 
@@ -1289,9 +1296,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
-
-  .avatar-box img { width: 120px; }
+  .avatar-box img { border-radius: 10%; width: 120px; }
 
   .info-content .name { margin-bottom: 15px; }
 
@@ -1377,13 +1382,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     flex-direction: column;
     align-items: center;
   }
-
-  .modal-avatar-box {
-    border-radius: 18px;
-    margin-bottom: 0;
-  }
-
-  .modal-avatar-box img { width: 65px; }
 
   .modal-img-wrapper > img {
     display: block;
@@ -1499,8 +1497,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 35px;
     max-width: 680px;
   }
-
-  .modal-avatar-box img { width: 80px; }
 
 
 
@@ -1735,8 +1731,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .sidebar-info { flex-direction: column; }
-
-  .avatar-box img { width: 150px; }
 
   .info-content .name {
     white-space: nowrap;

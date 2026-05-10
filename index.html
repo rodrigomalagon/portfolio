@@ -28,6 +28,37 @@
     <!--- ion icon  -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- FASE 1.2: Open Graph tags for social media previews -->
+  <meta property="og:title" content="Rodrigo Malagón — Data Analyst & Spatial Data Scientist" />
+  <meta property="og:description" content="Mathematician specialised in data science, machine learning and geospatial analysis. Python, SQL, GIS, ETL, Power BI." />
+  <meta property="og:image" content="https://rodrigomalagon.github.io/portfolio/assets/images/profile_pic.jpg" />
+  <meta property="og:url" content="https://rodrigomalagon.github.io/portfolio/" />
+  <meta property="og:type" content="website" />
+
+  <!-- FASE 1.2: Twitter/X Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Rodrigo Malagón — Data Analyst & Spatial Data Scientist" />
+  <meta name="twitter:description" content="Mathematician specialised in data science, machine learning and geospatial analysis." />
+  <meta name="twitter:image" content="https://rodrigomalagon.github.io/portfolio/assets/images/profile_pic.jpg" />
+
+  <!-- FASE 1.2: Schema.org Person markup for Google rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rodrigo Malagón",
+    "jobTitle": "Data Analyst & Spatial Data Scientist",
+    "url": "https://rodrigomalagon.github.io/portfolio/",
+    "image": "https://rodrigomalagon.github.io/portfolio/assets/images/profile_pic.jpg",
+    "email": "rodrigo.malagon.rodriguez@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/rodrigomalagonr/",
+      "https://github.com/rodrigomalagon"
+    ],
+    "knowsAbout": ["Data Science", "Machine Learning", "GIS", "Python", "SQL", "Geospatial Analysis", "ETL", "Power BI"]
+  }
+  </script>
 </head>
 
 <body>
@@ -54,6 +85,26 @@
           <h1 class="name" title="Rodrigo Malagón">Rodrigo Malagón</h1>
 
           <p class="title"> Data Analyst | Spatial Data Science </p>
+
+          <!-- FASE 1.4: Tagline de propuesta de valor -->
+          <p class="tagline">
+            I turn geospatial and business data into decisions —<br>
+            with rigorous maths, Python and GIS.
+          </p>
+
+          <!-- FASE 1.5: CTAs (Call to Action) en el hero -->
+          <div class="hero-cta">
+            <a href="files/CV_Rodrigo_Malagón_EN.pdf" 
+               class="btn btn-primary" 
+               target="_blank" 
+               rel="noopener"
+               download>
+              Download CV
+            </a>
+            <a href="#portfolio" class="btn btn-secondary">
+              See Projects
+            </a>
+          </div>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -61,7 +112,6 @@
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-        
 
       </div>
 
@@ -225,7 +275,7 @@
                     and a creative mind when dealing with any problem.
                     I have conducted research as part of financed research programs in my home country (Mexico) and abroad (Spain). 
                     Moreover I have experience in scientific environments, as I have presented oral and written works in my research path.
-                    In my <a href = https://hdl.handle.net/20.500.14330/TES01000824833>bachelor's thesis project</a>, I studied Differential Topology and in my personal projects and work experience
+                    In my <a href="https://hdl.handle.net/20.500.14330/TES01000824833" target="_blank" rel="noopener">bachelor's thesis project</a>, I studied Differential Topology and in my personal projects and work experience
                     I mastered applied topics, including Probability and Statistics.
                   </p>
                 </div>
@@ -244,7 +294,7 @@
 
                 <div class="service-item-text" data-expandable-text>
                   <p >
-                    I posses a strong understanding and +3 years experience on Machine Learning theory and methods.
+                    I possess a strong understanding and +3 years experience on Machine Learning theory and methods.
                     In my work experience at Nielsen I conducted data modelling tasks using regression methods.
                     A key ingredient implied a deep understanding of the models used and the main methods to tailor data accordingly
                     and present insightful results.
@@ -272,7 +322,7 @@
                     to data analysis and processing with Python as part of daily tasks in the lab.
                     Lately, as part of my postgraduate studies, I have acquried a strong knowledge of 
                     ETL and modelling methods using Python, SQL, and R. 
-                    Furthermore, I posses experience in Web Technologies using JavaScript, HTML, and CSS.
+                    Furthermore, I possess experience in Web Technologies using JavaScript, HTML, and CSS.
                   </p>
                 </div>
               </div>
@@ -296,7 +346,7 @@
                   I was able to represent my country in the International Geography Olympiad twice (Cracow, Poland 2014 and Tver, Russia 2015).
                   Recently, I developed my technical skills in Geographic Information Systems (GIS)
                   in integration with Web Technologies and Machine Learning, as part of my postgraduate studies.
-                  I am passionate abobut technology and its power to study and solve spatial problems.
+                  I am passionate about technology and its power to study and solve spatial problems.
                 </p>
               </div>
             </div>
@@ -370,61 +420,59 @@
 
           <h3 class="h3 skills-title">My skills</h3>
 
-          <ul class="skills-list content-card">
+          <!-- FASE 1.6: Skill chips instead of progress bars -->
+          <div class="skills-grid">
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data Science & ML (Python, R, SQL, ML/DL, Time Series)</h5>
-                <!--data value="80"></data-->
+            <div class="skill-group">
+              <h5 class="skill-group-title">Data Science & ML</h5>
+              <div class="skill-chips">
+                <span class="chip">Python</span>
+                <span class="chip">R</span>
+                <span class="chip">SQL</span>
+                <span class="chip">Scikit-learn</span>
+                <span class="chip">Keras</span>
+                <span class="chip">TensorFlow</span>
+                <span class="chip">Time Series</span>
+                <span class="chip">Bayesian Stats</span>
               </div>
+            </div>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+            <div class="skill-group">
+              <h5 class="skill-group-title">Data Engineering</h5>
+              <div class="skill-chips">
+                <span class="chip">ETL/ELT</span>
+                <span class="chip">REST APIs</span>
+                <span class="chip">Power BI</span>
+                <span class="chip">Power Query</span>
+                <span class="chip">Power Automate</span>
+                <span class="chip">Git</span>
+                <span class="chip">Pandas</span>
               </div>
+            </div>
 
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data Engineering (ETL/ELT, REST APIs, Power BI, Git)</h5>
-                <!--data value="70">70%</data-->
+            <div class="skill-group">
+              <h5 class="skill-group-title">Geospatial</h5>
+              <div class="skill-chips">
+                <span class="chip">QGIS</span>
+                <span class="chip">ArcGIS</span>
+                <span class="chip">PostGIS</span>
+                <span class="chip">GeoPandas</span>
+                <span class="chip">Leaflet.js</span>
+                <span class="chip">Raster analysis</span>
               </div>
+            </div>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
+            <div class="skill-group">
+              <h5 class="skill-group-title">Web</h5>
+              <div class="skill-chips">
+                <span class="chip">JavaScript</span>
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">jQuery</span>
               </div>
+            </div>
 
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Geospatial (GIS, ArcGIS/QGIS, PostGIS, GeoPandas, Raster)</h5>
-                <!--data value="90">90%</data-->
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 82%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web (JavaScript, HTML, CSS)</h5>
-                <!--data value="50">50%</data-->
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
+          </div>
 
         </section>
 
@@ -444,10 +492,10 @@
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
-        <a href="files/CV Rodrigo Malagón EN.pdf">
+        <a href="files/CV_Rodrigo_Malagon_EN.pdf" target="_blank" rel="noopener">
           <div class="click-btn">
             <p>
-              View CV
+              Read CV
             </p>
           </div>
         </a>
@@ -464,11 +512,42 @@
 
           <ol class="timeline-list">
 
-            <li class="timeline-item">
+            <li class="timeline-item current-role">
 
-              <h4 class="h4 timeline-item-title">Data Analyst & BI Developer</h4>
+              <div class="timeline-header-wrapper">
+                <h4 class="h4 timeline-item-title">Data Analyst & BI Developer</h4>
+                <span class="badge-current">● Current</span>
+              </div>
 
-              <span>Grupo Noa's (04/2025 - current)</span>
+              <span>Grupo Noa's, Castelló de la Plana, Spain (Remote) | 04/2025 – Present</span>
+
+              <p class="timeline-text">
+                > Design, optimization and automation of data pipelines (Python, SQL, Power Automate), improving data processing efficiency.
+              </p>
+
+              <p class="timeline-text">
+                > Development of ETL/ELT processes integrating REST APIs, CRMs and databases.
+              </p>
+
+              <p class="timeline-text">
+                > Exploratory data analysis and data modelling to support data-driven decision making.
+              </p>
+
+              <p class="timeline-text">
+                > Definition and calculation of business KPIs and metrics (SQL, Python and Power Query).
+              </p>
+
+              <p class="timeline-text">
+                > Creation of interactive dashboards and visualization solutions (Power BI).
+              </p>
+
+              <p class="timeline-text">
+                > Automation of workflows with Power Automate, reducing manual tasks.
+              </p>
+
+              <p class="timeline-text">
+                > Collaboration with stakeholders and technical support for continuous improvement of data-driven processes.
+              </p>
 
             </li>
 
@@ -568,6 +647,9 @@
               <p class="timeline-text">
                 > Specialisations: Data Science, Machine Learning, Geostatistics, Databases, Web Programming, and Geospatial Analysis.
               </p>
+              <p class="timeline-text">
+                > Thesis: <a href="http://hdl.handle.net/10234/733242" target="_blank" rel="noopener">Spatio-temporal machine learning for flood susceptibility mapping</a>.
+              </p>
 
             </li>
 
@@ -604,7 +686,7 @@
                 > Specialisations: Mathematical Analysis, Probability, Statistics, Programming, Vectorial Mechanics, Partial and Ordinary Differential Equations, Topology.
               </p>
               <p class="timeline-text">
-                > Thesis: Morse Homology and its Applications.
+                > Thesis: <a href="https://hdl.handle.net/20.500.14330/TES01000824833" target="_blank" rel="noopener">Morse Homology and its Applications</a>.
               </p>
 
             </li>
@@ -708,7 +790,7 @@
 
                 <div class="project-description-text">
                   <p>
-                    I developed this project as part of a UN collaboration between Universitat Jaume I and the United Nations Global Service Centre, building time series forecasting models for energy consumption prediction in UNISFA facilities in Abyei. The workflow integrated SQL and R for modelling and analytics, plus Git for version control and reproducible delivery.
+                    I developed this project as part of a UN collaboration between Universitat Jaume I and the United Nations Global Service Centre, building time series forecasting models for energy consumption prediction in UNISFA facilities in Abyei. The workflow integrated SQL and R for modelling and analytics, plus Git for version control and reproducible delivery. Achieved strong predictive accuracy enabling reliable energy consumption forecasting for facility planning.
                   </p>
                 </div>
 

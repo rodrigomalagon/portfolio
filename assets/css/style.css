@@ -22,7 +22,6 @@
    */
 
   /* solid */
-
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
   --eerie-black-1: hsl(240, 2%, 13%);
@@ -39,57 +38,50 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
-  /* gradient */
-
+  /* gradients */
   --bg-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
+    to bottom right,
+    hsl(240, 1%, 25%) 3%,
     hsl(0, 0%, 19%) 97%
   );
   --bg-gradient-jet: linear-gradient(
-    to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
+    to bottom right,
+    hsla(240, 1%, 18%, 0.251) 0%,
     hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+  ), var(--onyx);
   --bg-gradient-blue-1: linear-gradient(
-    to bottom right, 
-    hsla(202, 100%, 72%, 0.489),
-    hsla(36, 100%, 69%, 0) 50%
+    to bottom right,
+    var(--light-blue) 0%,
+    var(--strong-blue) 100%
   );
   --bg-gradient-blue-2: linear-gradient(
-    135deg, 
-    hsla(202, 100%, 72%, 0.489),
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    135deg,
+    hsla(193, 60%, 61%, 0.25) 0%,
+    hsla(218, 37%, 45%, 0.25) 100%
+  ), var(--onyx);
   --border-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
     hsla(0, 0%, 25%, 0) 50%
   );
-  --text-gradient-yellow: linear-gradient(
-    to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
-  );
   --text-gradient-blue: linear-gradient(
-    to right, 
+    to right,
     var(--strong-blue),
     var(--light-blue)
   );
   --text-gradient-purple: linear-gradient(
-    to right, 
+    to right,
     var(--light-purple),
     var(--strong-purple)
   );
 
+  /* misc */
+  --li: hsl(0, 0%, 26%);
+
   /**
    * typography
    */
-
-  /* font-family */
   --ff-poppins: 'Poppins', sans-serif;
-
-  /* font-size */
   --fs-1: 24px;
   --fs-2: 18px;
   --fs-3: 17px;
@@ -98,8 +90,6 @@
   --fs-6: 14px;
   --fs-7: 13px;
   --fs-8: 11px;
-
-  /* font-weight */
   --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
@@ -108,7 +98,6 @@
   /**
    * shadow
    */
-  
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
@@ -118,10 +107,8 @@
   /**
    * transition
    */
-
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
-
 }
 
 
@@ -389,6 +376,53 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+}
+
+/* FASE 1.4: Tagline en sidebar hero */
+.tagline {
+  font-size: 0.95rem;
+  color: var(--light-gray-70);
+  line-height: 1.6;
+  max-width: 340px;
+  margin: 0.75rem auto 1.25rem;
+  text-align: center;
+}
+
+/* FASE 1.5: CTA buttons en sidebar hero */
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--strong-purple);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--strong-purple);
+  border: 1.5px solid currentColor;
 }
 
 .info_more-btn {
@@ -776,6 +810,43 @@ main {
   line-height: 1.6;
 }
 
+/* FASE 0: Styles for current role indicator */
+.timeline-header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge-current {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 12px;
+  background: var(--eerie-black-2);
+  color: var(--white-1);
+  border: 1px solid var(--light-gray-70);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: none;
+}
+
+.timeline-item.current-role::after {
+  background: var(--white-1);
+  box-shadow: 0 0 0 4px var(--jet), 0 0 0 1px var(--strong-blue);
+}
+
+@keyframes pulse-badge {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 .timeline .icon-box {color: var(--light-purple);}
 
 
@@ -804,36 +875,43 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+/* FASE 1.6: Skill chips grid (replaced progress bars) */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
 
-
-.skills-item:not(:last-child) { margin-bottom: 15px; }
-
-.skill .title-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.skill-group-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--light-gray-70);
   margin-bottom: 8px;
+  font-weight: 600;
 }
 
-.skill .title-wrapper data {
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: var(--eerie-black-2);
   color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
+  border: 1px solid var(--jet);
+  line-height: 1.2;
 }
 
-.skill-progress-bg {
-  background: var(--li);
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
-}
-
-.skill-progress-fill {
-  background: var(--text-gradient-blue); 
-  height: 100%;
-  border-radius: inherit;
-}
+/* Ocultar barras anteriores */
+.skills-list { display: none; }
 
 
 

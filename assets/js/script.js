@@ -137,23 +137,34 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 // page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const navigationLinks = document.querySelectorAll("[data-page-target]");
 const pages = document.querySelectorAll("[data-page]");
+const homeLink = document.querySelector("[data-page-target='about']");
+
+const setActivePage = function (targetPage) {
+  for (let i = 0; i < pages.length; i++) {
+    const isActive = pages[i].dataset.page === targetPage;
+    pages[i].classList.toggle("active", isActive);
+  }
+
+  for (let i = 0; i < navigationLinks.length; i++) {
+    const isActive = navigationLinks[i].dataset.pageTarget === targetPage;
+    navigationLinks[i].classList.toggle("active", isActive);
+  }
+
+  window.scrollTo(0, 0);
+}
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+    setActivePage(this.dataset.pageTarget);
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
+  });
+}
 
+if (homeLink) {
+  homeLink.addEventListener("click", function () {
+    setActivePage("about");
   });
 }

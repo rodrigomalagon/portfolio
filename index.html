@@ -29,20 +29,17 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!-- FASE 1.2: Open Graph tags for social media previews -->
   <meta property="og:title" content="Rodrigo Malagón — Data Analyst & Spatial Data Scientist" />
   <meta property="og:description" content="Mathematician specialised in data science, machine learning and geospatial analysis. Python, SQL, GIS, ETL, Power BI." />
   <meta property="og:image" content="https://rodrigomalagon.github.io/portfolio/assets/images/profile_pic.jpg" />
   <meta property="og:url" content="https://rodrigomalagon.github.io/portfolio/" />
   <meta property="og:type" content="website" />
 
-  <!-- FASE 1.2: Twitter/X Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Rodrigo Malagón — Data Analyst & Spatial Data Scientist" />
   <meta name="twitter:description" content="Mathematician specialised in data science, machine learning and geospatial analysis." />
   <meta name="twitter:image" content="https://rodrigomalagon.github.io/portfolio/assets/images/profile_pic.jpg" />
 
-  <!-- FASE 1.2: Schema.org Person markup for Google rich results -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -86,28 +83,39 @@
         <div class="info-content">
           <h1 class="name" title="Rodrigo Malagón">Rodrigo Malagón</h1>
 
-          <p class="title"> Data Analyst | Spatial Data Science </p>
+          <p class="title" data-i18n data-en="Data Analyst | Spatial Data Science" data-es="Analista de Datos | Científico de Datos Geoespaciales"> Data Analyst | Spatial Data Science </p>
 
-          <!-- FASE 1.4: Tagline de propuesta de valor -->
-          <p class="tagline">
+          <p class="tagline" data-i18n data-en="I turn geospatial and business data into decisions with rigorous maths, Python and GIS." data-es="Convierto datos geoespaciales y empresariales en decisiones con rigor matemático, Python y GIS.">
             I turn geospatial and business data into decisions —<br>
             with rigorous maths, Python and GIS.
           </p>
 
-          <!-- FASE 1.5: CTAs (Call to Action) en el hero -->
           <div class="hero-cta">
             <a href="files/CV_Rodrigo_Malagón_EN.pdf" 
                class="btn btn-primary" 
                target="_blank" 
                rel="noopener"
-               download>
+               download
+              data-cv-link
+              data-cv-en="files/CV_Rodrigo_Malagón_EN.pdf"
+              data-cv-es="files/CV_Rodrigo_Malagón_ES.pdf"
+               data-i18n data-en="Download CV" data-es="Descargar CV">
               Download CV
             </a>
-            <button class="btn btn-secondary" type="button" data-page-target="portfolio">Portfolio</button>
+            <button class="btn btn-secondary" type="button" data-page-target="portfolio" data-i18n data-en="See Portfolio" data-es="Ver Portafolio">See Portfolio</button>
           </div>
+
+          <button 
+            id="lang-toggle" 
+            class="lang-btn sidebar-lang-btn" 
+            aria-label="Switch language"
+            title="Cambiar idioma / Switch language">
+            <ion-icon name="globe-outline" aria-hidden="true"></ion-icon>
+            <span id="lang-current">EN</span>
+          </button>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
+        <button class="info_more-btn" data-sidebar-btn data-i18n data-en="Show Contacts" data-es="Ver Contactos">
           <span>Show Contacts</span>
 
           <ion-icon name="chevron-down"></ion-icon>
@@ -133,7 +141,7 @@
             
 
             <div class="contact-info">
-              <p class="contact-title">Email</p>
+              <p class="contact-title" data-i18n data-en="Email" data-es="Correo">Email</p>
               <p class="contact-link">rodrigo.malagon.rodriguez@gmail.com</p>             
             </div>
 
@@ -149,7 +157,7 @@
             </a>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
+              <p class="contact-title" data-i18n data-en="Location" data-es="Ubicación">Location</p>
 
               <address>Castelló de la Plana, Spain</address>
             </div>
@@ -199,15 +207,15 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-page-target="about">About</button>
+            <button class="navbar-link  active" data-page-target="about" data-i18n data-en="About" data-es="Sobre mí">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-page-target="resume">Resume</button>
+            <button class="navbar-link" data-page-target="resume" data-i18n data-en="Resume" data-es="Currículum">Resume</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-page-target="portfolio">Portfolio</button>
+            <button class="navbar-link" data-page-target="portfolio" data-i18n data-en="Portfolio" data-es="Portafolio">Portfolio</button>
           </li>
 
 
@@ -230,19 +238,19 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title" data-i18n data-en="About me" data-es="Sobre mí">About me</h2>
         </header>
 
         <section class="about-text">
-          <p>
+          <p data-i18n data-en="Mathematician specialised in data science and geospatial analysis. I combine a rigorous statistical background with hands-on experience in data modelling, data engineering and visualisation." data-es="Matemático especializado en ciencia de datos y análisis geoespacial. Combino una sólida formación estadística con experiencia práctica en modelado de datos, ingeniería de datos y visualización.">
             Mathematician specialised in data science and geospatial analysis. I combine a rigorous statistical background with hands-on experience in data modelling, data engineering and visualisation.
           </p>
 
-          <p>
+          <p data-i18n data-en="At Nielsen I implemented Bayesian statistical models and time series for leading CPG sector clients in the United States, translating complex results into actionable marketing KPIs. Currently at Grupo Noa's I design and automate data pipelines, ETL/ELT processes and REST API integrations, building Power BI dashboards to support data-driven decision making." data-es="En Nielsen implementé modelos estadísticos bayesianos y series temporales para clientes líderes del sector CPG en Estados Unidos, traduciendo resultados complejos en KPIs de marketing accionables. Actualmente en Grupo Noa's diseño y automatizo pipelines de datos, procesos ETL/ELT e integraciones de API REST, construyendo dashboards de Power BI para apoyar la toma de decisiones impulsada por datos.">
             At Nielsen I implemented Bayesian statistical models and time series for leading CPG sector clients in the United States, translating complex results into actionable marketing KPIs. Currently at Grupo Noa's I design and automate data pipelines, ETL/ELT processes and REST API integrations, building Power BI dashboards to support data-driven decision making.
           </p>
 
-          <p>
+          <p data-i18n data-en="My training as an Erasmus Mundus scholar in Geospatial Technologies (Universitat Jaume I · University of Münster) allows me to incorporate advanced spatial analysis as an additional layer: geospatial predictive modelling, machine learning applied to location data, raster analysis and analytical cartography." data-es="Mi formación como becario Erasmus Mundus en Tecnologías Geoespaciales (Universitat Jaume I · Universidad de Münster) me permite incorporar análisis espacial avanzado como capa adicional: modelado predictivo geoespacial, aprendizaje automático aplicado a datos de ubicación, análisis de ráster y cartografía analítica.">
             My training as an Erasmus Mundus scholar in Geospatial Technologies (Universitat Jaume I · University of Münster) allows me to incorporate advanced spatial analysis as an additional layer: geospatial predictive modelling, machine learning applied to location data, raster analysis and analytical cartography.
           </p>
 
@@ -255,7 +263,7 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">Some insights</h3>
+          <h3 class="h3 service-title" data-i18n data-en="Some insights" data-es="Perspectivas clave">Some insights</h3>
 
           <ul class="service-list">
             
@@ -266,10 +274,10 @@
               </div>
 
               <div class="service-content-box" >
-                <h4 class="h4 service-item-title" data-expandable-title>Mathematics & Statistics</h4>
+                <h4 class="h4 service-item-title" data-expandable-title data-i18n data-en="Mathematics & Statistics" data-es="Matemática y Estadística">Mathematics & Statistics</h4>
 
                 <div class="service-item-text" data-expandable-text>
-                  <p >
+                  <p data-i18n data-en="I have a strong background in pure and applied Mathematics. After almost a decade of rigorous studying Mathematics, I have developed a good level of abstraction and a creative mind when dealing with any problem. I have conducted research as part of financed research programs in my home country (Mexico) and abroad (Spain). Moreover I have experience in scientific environments, as I have presented oral and written works in my research path. In my &lt;a href=&#x27;https://hdl.handle.net/20.500.14330/TES01000824833&#x27; target=&#x27;_blank&#x27; rel=&#x27;noopener&#x27;&gt;bachelor&#x27;s thesis project&lt;/a&gt;, I studied Differential Topology and in my personal projects and work experience I mastered applied topics, including Probability and Statistics." data-es="Tengo una s\u00f3lida formaci\u00f3n en Matem\u00e1ticas puras y aplicadas. Despu\u00e9s de casi una d\u00e9cada de estudios rigurosos de Matem\u00e1ticas, he desarrollado un buen nivel de abstracci\u00f3n y una mente creativa al tratar cualquier problema. He realizado investigaci\u00f3n como parte de programas de investigaci\u00f3n financiados en mi pa\u00eds de origen (M\u00e9xico) y en el extranjero (Espa\u00f1a). Adem\u00e1s, tengo experiencia en entornos cient\u00edficos, ya que he presentado trabajos orales y escritos en mi trayectoria investigadora. En mi &lt;a href=&#x27;https://hdl.handle.net/20.500.14330/TES01000824833&#x27; target=&#x27;_blank&#x27; rel=&#x27;noopener&#x27;&gt;proyecto de tesis de bachillerato&lt;/a&gt;, estudié Topolog\u00eda Diferencial y en mis proyectos personales y experiencia laboral domin\u00e9 temas aplicados, incluyendo Probabilidad y Estad\u00edstica.">
                     I have a strong background in pure and applied Mathematics. 
                     After almost a decade of rigurous studying Mathematics, I have developed a good level of abstraction
                     and a creative mind when dealing with any problem.
@@ -290,10 +298,10 @@
               </div>
 
               <div class="service-content-box" >
-                <h4 class="h4 service-item-title" data-expandable-title>Machine Learning</h4>
+                <h4 class="h4 service-item-title" data-expandable-title data-i18n data-en="Machine Learning" data-es="Aprendizaje Automático">Machine Learning</h4>
 
                 <div class="service-item-text" data-expandable-text>
-                  <p >
+                  <p data-i18n data-en="I possess a strong understanding and +3 years experience on Machine Learning theory and methods. In my work experience at Nielsen I conducted data modelling tasks using regression methods. A key ingredient implied a deep understanding of the models used and the main methods to tailor data accordingly and present insightful results. Furthermore, I formally conducted a core study of Deep Learning and other state-of-the-art algorithms as part of my postgraduate studies." data-es="Poseo una sólida comprensión y más de 3 años de experiencia en teoría y métodos de Aprendizaje Automático. En mi experiencia laboral en Nielsen realicé tareas de modelado de datos utilizando métodos de regresión. Un ingrediente clave implicaba una comprensión profunda de los modelos utilizados y los métodos principales para adaptar los datos en consecuencia y presentar resultados perspicaces. Además, realicé formalmente un estudio básico de Aprendizaje Profundo y otros algoritmos de última generación como parte de mis estudios de posgrado.">
                     I possess a strong understanding and +3 years experience on Machine Learning theory and methods.
                     In my work experience at Nielsen I conducted data modelling tasks using regression methods.
                     A key ingredient implied a deep understanding of the models used and the main methods to tailor data accordingly
@@ -313,10 +321,10 @@
               </div>
 
               <div class="service-content-box" >
-                <h4 class="h4 service-item-title" data-expandable-title>Programming</h4>
+                <h4 class="h4 service-item-title" data-expandable-title data-i18n data-en="Programming" data-es="Programación">Programming</h4>
 
                 <div class="service-item-text" data-expandable-text>
-                  <p >
+                  <p data-i18n data-en="In the past +5 years, I have been able to develop my programming skills in different contexts. As a student of the BSc. Physics during two years, I was first exposed to Linux environment and to data analysis and processing with Python as part of daily tasks in the lab. Lately, as part of my postgraduate studies, I have acquried a strong knowledge of ETL and modelling methods using Python, SQL, and R. Furthermore, I possess experience in Web Technologies using JavaScript, HTML, and CSS." data-es="En los últimos 5 años, he podido desarrollar mis habilidades de programación en diferentes contextos. Como estudiante de la Licenciatura en Física durante dos años, me expuse por primera vez al entorno Linux y al análisis de datos y procesamiento con Python como parte de tareas diarias en el laboratorio. Últimamente, como parte de mis estudios de posgrado, he adquirido un fuerte conocimiento de métodos ETL y de modelado utilizando Python, SQL y R. Además, poseo experiencia en Tecnologías Web utilizando JavaScript, HTML y CSS.">
                     In the past +5 years, I have been able to develop my programming skills in different contexts. 
                     As a student of the BSc. Physics during two years, I was first exposed to Linux environment and
                     to data analysis and processing with Python as part of daily tasks in the lab.
@@ -338,10 +346,10 @@
             </div>
 
             <div class="service-content-box" >
-              <h4 class="h4 service-item-title" data-expandable-title>Geospatial advocate</h4>
+              <h4 class="h4 service-item-title" data-expandable-title data-i18n data-en="Geospatial advocate" data-es="Defensor de lo Geoespacial">Geospatial advocate</h4>
 
               <div class="service-item-text" data-expandable-text>
-                <p >
+                <p data-i18n data-en="Since I was a teenager, I have been deeply engaged in understanding our natural and social environments. I was able to represent my country in the International Geography Olympiad twice (Cracow, Poland 2014 and Tver, Russia 2015). Recently, I developed my technical skills in Geographic Information Systems (GIS) in integration with Web Technologies and Machine Learning, as part of my postgraduate studies. I am passionate about technology and its power to study and solve spatial problems." data-es="Desde que era adolescente, he estado profundamente comprometido con entender nuestros entornos naturales y sociales. Pude representar a mi país en las Olimpiadas Internacionales de Geografía dos veces (Cracovia, Polonia 2014 y Tvér, Rusia 2015). Recientemente, desarrollé mis habilidades técnicas en Sistemas de Información Geográfica (SIG) en integración con Tecnologías Web y Aprendizaje Automático, como parte de mis estudios de posgrado. Me apasiona la tecnología y su poder para estudiar y resolver problemas espaciales.">
                   Since I was a teenager, I have been deeply engaged in understanding our natural and social environments.
                   I was able to represent my country in the International Geography Olympiad twice (Cracow, Poland 2014 and Tver, Russia 2015).
                   Recently, I developed my technical skills in Geographic Information Systems (GIS)
@@ -360,10 +368,10 @@
             </div>
 
             <div class="service-content-box" >
-              <h4 class="h4 service-item-title" data-expandable-title>Languages enthusiast</h4>
+              <h4 class="h4 service-item-title" data-expandable-title data-i18n data-en="Languages enthusiast" data-es="Entusiasta de Idiomas">Languages enthusiast</h4>
 
               <div class="service-item-text" data-expandable-text>
-                <p >
+                <p data-i18n data-en="I have always loved to learn languages. My keen interest in them has opened me the opportunity to make research stays and studies in several countries (Spain, UK, Germany). I consider myself a strong defensor of linguistic and cultural diversity." data-es="Siempre me ha encantado aprender idiomas. Mi gran interés en ellos me ha abierto la oportunidad de hacer estancias de investigación y estudios en varios países (España, Reino Unido, Alemania). Me considero un firme defensor de la diversidad lingüística y cultural.">
                   I have always loved to learn languages.
                   My keen interest in them has opened me the opportunity to make research stays 
                   and studies in several countries (Spain, UK, Germany).
@@ -418,9 +426,8 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
+          <h3 class="h3 skills-title" data-i18n data-en="My skills" data-es="Mis habilidades">My skills</h3>
 
-          <!-- FASE 1.6: Skill chips instead of progress bars -->
           <div class="skills-grid">
 
             <div class="skill-group">
@@ -489,12 +496,12 @@
       <article class="resume" data-page="resume">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title" data-i18n data-en="Resume" data-es="Currículum">Resume</h2>
         </header>
 
-        <a href="files/CV_Rodrigo_Malagón_EN.pdf" target="_blank" rel="noopener">
+        <a href="files/CV_Rodrigo_Malagón_EN.pdf" target="_blank" rel="noopener" data-cv-link data-cv-en="files/CV_Rodrigo_Malagón_EN.pdf" data-cv-es="files/CV_Rodrigo_Malagón_ES.pdf">
           <div class="click-btn">
-            <p>
+            <p data-i18n data-en="Read CV" data-es="Leer CV">
               Read CV
             </p>
           </div>
@@ -507,7 +514,7 @@
               <ion-icon name="briefcase-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Experience</h3>
+            <h3 class="h3" data-i18n data-en="Experience" data-es="Experiencia">Experience</h3>
           </div>
 
           <ol class="timeline-list">
@@ -515,37 +522,37 @@
             <li class="timeline-item current-role">
 
               <div class="timeline-header-wrapper">
-                <h4 class="h4 timeline-item-title">Data Analyst & BI Developer</h4>
-                <span class="badge-current">● Current</span>
+                <h4 class="h4 timeline-item-title" data-i18n data-en="Data Analyst &amp; BI Developer" data-es="Analista de Datos y Desarrollador BI">Data Analyst & BI Developer</h4>
+                <span class="badge-current" data-i18n data-en="● Current" data-es="● Actual">● Current</span>
               </div>
 
-              <span>Grupo Noa's, Castelló de la Plana, Spain (Remote) | 04/2025 – Present</span>
+              <span data-i18n data-en="Grupo Noa's, Castelló de la Plana, Spain (04/2025 – Present)" data-es="Grupo Noa's, Castelló de la Plana, España (04/2025 – Presente)">Grupo Noa's, Castelló de la Plana, Spain (04/2025 – Present)</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Design, optimization and automation of data pipelines (Python, SQL, Power Automate), improving data processing efficiency." data-es="&gt; Diseño, optimización y automatización de pipelines de datos (Python, SQL, Power Automate), mejorando la eficiencia del procesamiento de datos.">
                 > Design, optimization and automation of data pipelines (Python, SQL, Power Automate), improving data processing efficiency.
               </p>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Development of ETL/ELT processes integrating REST APIs, CRMs and databases." data-es="&gt; Desarrollo de procesos ETL/ELT integrando APIs REST, CRMs y bases de datos.">
                 > Development of ETL/ELT processes integrating REST APIs, CRMs and databases.
               </p>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Exploratory data analysis and data modelling to support data-driven decision making." data-es="&gt; Análisis exploratorio de datos y modelado de datos para respaldar la toma de decisiones basada en datos.">
                 > Exploratory data analysis and data modelling to support data-driven decision making.
               </p>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Definition and calculation of business KPIs and metrics (SQL, Python and Power Query)." data-es="&gt; Definición y cálculo de KPIs y métricas empresariales (SQL, Python y Power Query).">
                 > Definition and calculation of business KPIs and metrics (SQL, Python and Power Query).
               </p>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Creation of interactive dashboards and visualization solutions (Power BI)." data-es="&gt; Creación de dashboards interactivos y soluciones de visualización (Power BI).">
                 > Creation of interactive dashboards and visualization solutions (Power BI).
               </p>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Automation of workflows with Power Automate, reducing manual tasks." data-es="&gt; Automatización de flujos de trabajo con Power Automate, reduciendo tareas manuales.">
                 > Automation of workflows with Power Automate, reducing manual tasks.
               </p>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Collaboration with stakeholders and technical support for continuous improvement of data-driven processes." data-es="&gt; Colaboración con stakeholders y soporte técnico para la mejora continua de procesos orientados a datos.">
                 > Collaboration with stakeholders and technical support for continuous improvement of data-driven processes.
               </p>
 
@@ -553,11 +560,11 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Grant holder</h4>
+              <h4 class="h4 timeline-item-title" data-i18n data-en="Grant holder" data-es="Becario de Máster Erasmus Mundus">Grant holder</h4>
 
-              <span>Erasmus Mundus Master in Geospatial Technologies (09/2023 — 03/2025)</span>
+              <span data-i18n data-en="Erasmus Mundus Master in Geospatial Technologies (09/2023 — 03/2025)" data-es="Máster Erasmus Mundus en Tecnologías Geoespaciales (09/2023 — 03/2025)">Erasmus Mundus Master in Geospatial Technologies (09/2023 — 03/2025)</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Developed Machine Learning models to forecast the consumption of electricity in the military facilities of the UN in Sudan (SQL, R, Git) and flood classification model with Deep Learning (QGIS, R, Keras, TensorFlow).&#10;&gt; Specialisations: Data Science, Machine Learning, Statistics (Python, R), Databases (SQL), Web Programming (JavaScript, HTML, CSS), and GIS (ArcGIS, QGIS, PostGIS)." data-es="&gt; Desarrollé modelos de Aprendizaje Automático para pronosticar el consumo de electricidad en las instalaciones militares de la ONU en Sudán (SQL, R, Git) y modelo de clasificación de inundaciones con Aprendizaje Profundo (QGIS, R, Keras, TensorFlow).&#10;&gt; Especializaciones: Ciencia de Datos, Aprendizaje Automático, Estadística (Python, R), Bases de Datos (SQL), Programación Web (JavaScript, HTML, CSS), y SIG (ArcGIS, QGIS, PostGIS).">
                 > Developed Machine Learning models to forecast the consumption of electricity in the military facilities of the UN in Sudan (SQL, R, Git) and flood classification model with Deep Learning (QGIS, R, Keras, TensorFlow).
                 > Specialisations: Data Science, Machine Learning, Statistics (Python, R), Databases (SQL), Web Programming (JavaScript, HTML, CSS), and GIS (ArcGIS, QGIS, PostGIS).
               </p>
@@ -566,19 +573,19 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Modelling Analyst</h4>
+              <h4 class="h4 timeline-item-title" data-i18n data-en="Modelling Analyst" data-es="Analista de Modelado">Modelling Analyst</h4>
 
-              <span>Nielsen (10/2022 - 08/2023)</span>
+              <span data-i18n data-en="Nielsen (10/2022 - 08/2023)" data-es="Nielsen (10/2022 - 08/2023)">Nielsen (10/2022 - 08/2023)</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Implemented machine learning modelling to drive insights from media and sales time series for US and EU clients leading the CPG sector through attribution models (Unilever, Johnson&amp;Johnson, Ferrero)." data-es="&gt; Implementé modelado de aprendizaje automático para generar informaciones a partir de series de tiempo de medios y ventas para clientes estadounidenses y europeos líderes en el sector CPG a través de modelos de atribución (Unilever, Johnson&amp;Johnson, Ferrero).">
                 > Implemented machine learning modelling to drive insights from media and sales time series for US and EU clients leading the CPG sector through attribution models (Unilever, Johnson&Johnson, Ferrero).
               </p>
               
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Translated model results to benchmark marketing KPIs presented to the client (Power Query, Excel), to measure the impact of their marketing strategies." data-es="&gt; Traduje resultados del modelo a KPIs de marketing de referencia presentados al cliente (Power Query, Excel), para medir el impacto de sus estrategias de marketing.">
                 > Translated model results to benchmark marketing KPIs presented to the client (Power Query, Excel), to measure the impact of their marketing strategies.
               </p>
               
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Collaborated with international teams (data processing, modelling, and customer success teams) across multiple projects." data-es="&gt; Colaboré con equipos internacionales (equipos de procesamiento de datos, modelado y éxito del cliente) en múltiples proyectos.">
                 > Collaborated with international teams (data processing, modelling, and customer success teams) across multiple projects.
               </p>
 
@@ -586,15 +593,15 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Undergraduate researcher</h4>
+              <h4 class="h4 timeline-item-title" data-i18n data-en="Undergraduate researcher" data-es="Investigador de pregrado">Undergraduate researcher</h4>
 
-              <span>Universidad de Sevilla (09/2021– 12/2021)</span>
+              <span data-i18n data-en="Universidad de Sevilla (09/2021– 12/2021)" data-es="Universidad de Sevilla (09/2021– 12/2021)">Universidad de Sevilla (09/2021– 12/2021)</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Conducted undergraduate thesis research at the Department of Geometry and Topology." data-es="&gt; Realicé investigación de tesis de pregrado en el Departamento de Geometría y Topología.">
                 > Conducted undergraduate thesis research at the Department of Geometry and Topology.
               </p>
               
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Presented results at a weekly seminar held at the university." data-es="&gt; Presenté resultados en un seminario semanal realizado en la universidad.">
                 > Presented results at a weekly seminar held at the university.
               </p>
                         
@@ -602,15 +609,15 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Assistant professor</h4>
+              <h4 class="h4 timeline-item-title" data-i18n data-en="Assistant professor" data-es="Profesor Asistente">Assistant professor</h4>
 
-              <span>Universidad Nacional Autónoma de México (08/2019– 07/2021)</span>
+              <span data-i18n data-en="Universidad Nacional Autónoma de México (08/2019– 07/2021)" data-es="Universidad Nacional Autónoma de México (08/2019– 07/2021)">Universidad Nacional Autónoma de México (08/2019– 07/2021)</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Taught Differential &amp; Integral Calculus I-III at the bachelor's degrees in Mathematics, Physics, and Actuarial Sciences." data-es="&gt; Impartí Cálculo Diferencial e Integral I-III en las licenciaturas de Matemáticas, Física y Ciencias Actuariales.">
                 > Taught Differential & Integral Calculus I-III at the bachelor's degrees in Mathematics, Physics, and Actuarial Sciences.
               </p>
               
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Prepared and presented class material. Graded exams and assignments." data-es="&gt; Preparé y presenté material de clase. Califé exámenes y tareas.">
                 > Prepared and presented class material. Graded exams and assignments.
               </p>
                         
@@ -627,27 +634,27 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Education</h3>
+            <h3 class="h3" data-i18n data-en="Education" data-es="Educación">Education</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">MSc. Geospatial Technologies</h4>
+              <h4 class="h4 timeline-item-title" data-i18n data-en="MSc. Geospatial Technologies" data-es="MSc. Tecnologías Geoespaciales">MSc. Geospatial Technologies</h4>
 
-              <span>Universitat Jaume I, Spain</span>
-              <span>Universität Münster, Germany</span>
-              <span> Universidade NOVA de Lisboa, Portugal</span>
-              <span>09/2023 - 03/2025</span>
+              <span data-i18n data-en="Universitat Jaume I, Spain" data-es="Universitat Jaume I, España">Universitat Jaume I, Spain</span>
+              <span data-i18n data-en="Universität Münster, Germany" data-es="Universität Münster, Alemania">Universität Münster, Germany</span>
+              <span data-i18n data-en=" Universidade NOVA de Lisboa, Portugal" data-es=" Universidade NOVA de Lisboa, Portugal"> Universidade NOVA de Lisboa, Portugal</span>
+              <span data-i18n data-en="09/2023 - 03/2025" data-es="09/2023 - 03/2025">09/2023 - 03/2025</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Grade: 9.22/10.00." data-es="&gt; Calificación: 9.22/10.00.">
                 > Grade: 9.22/10.00.
               </p>
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Specialisations: Data Science, Machine Learning, Geostatistics, Databases, Web Programming, and Geospatial Analysis." data-es="&gt; Especializaciones: Ciencia de Datos, Aprendizaje Automático, Geoestadistica, Bases de Datos, Programación Web, y Análisis Geoespacial.">
                 > Specialisations: Data Science, Machine Learning, Geostatistics, Databases, Web Programming, and Geospatial Analysis.
               </p>
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Thesis: &lt;a href=&#x27;https://hdl.handle.net/10234/733242&#x27; target=&#x27;_blank&#x27; rel=&#x27;noopener&#x27;&gt;Energy consumption modelling in IoT-surveyed peacekeeping missions&lt;/a&gt;." data-es="&gt; Tesis: &lt;a href=&#x27;https://hdl.handle.net/10234/733242&#x27; target=&#x27;_blank&#x27; rel=&#x27;noopener&#x27;&gt;Modelado del consumo de energía en misiones de mantenimiento de la paz monitoreadas con IoT&lt;/a&gt;.">
                 > Thesis: <a href="https://hdl.handle.net/10234/733242" target="_blank" rel="noopener">Energy consumption modelling in IoT-surveyed peacekeeping missions</a>.
               </p>
 
@@ -655,18 +662,18 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Visiting Student</h4>
+              <h4 class="h4 timeline-item-title" data-i18n data-en="Visiting Student" data-es="Estudiante Visitante">Visiting Student</h4>
 
-              <span>University of Bristol, UK</span>
-              <span>01/2020 - 07/2020</span>
+              <span data-i18n data-en="University of Bristol, UK" data-es="University of Bristol, Reino Unido">University of Bristol, UK</span>
+              <span data-i18n data-en="01/2020 - 07/2020" data-es="01/2020 - 07/2020">01/2020 - 07/2020</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Grade: First." data-es="&gt; Calificación: Excelente.">
                 > Grade: First.
               </p>
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Specialisations: Partial Differential Equations, Logic, Number Theory." data-es="&gt; Especializaciones: Ecuaciones Diferenciales Parciales, Lógica, Teoría de Números.">
                 > Specialisations: Partial Differential Equations, Logic, Number Theory.
               </p>
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Membership of the Bristol Data Science Society." data-es="&gt; Miembro de la Sociedad de Ciencia de Datos de Bristol.">
                 > Membership of the Bristol Data Science Society.
               </p>
 
@@ -674,18 +681,18 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">BSc. Mathematics</h4>
+              <h4 class="h4 timeline-item-title" data-i18n data-en="BSc. Mathematics" data-es="BSc. Matemáticas">BSc. Mathematics</h4>
 
-              <span>Universidad Nacional Autónoma de México, Mexico</span>
-              <span>08/2016 – 10/2022</span>
+              <span data-i18n data-en="Universidad Nacional Autónoma de México, Mexico" data-es="Universidad Nacional Autónoma de México, México">Universidad Nacional Autónoma de México, Mexico</span>
+              <span data-i18n data-en="08/2016 – 10/2022" data-es="08/2016 – 10/2022">08/2016 – 10/2022</span>
 
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Grade: 10.00/10.00." data-es="&gt; Calificación: 10.00/10.00.">
                 > Grade: 10.00/10.00.
               </p>
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Specialisations: Mathematical Analysis, Probability, Statistics, Programming, Vectorial Mechanics, Partial and Ordinary Differential Equations, Topology." data-es="&gt; Especializaciones: Análisis Matemático, Probabilidad, Estadística, Programación, Mecánica Vectorial, Ecuaciones Diferenciales Parciales y Ordinarias, Topología.">
                 > Specialisations: Mathematical Analysis, Probability, Statistics, Programming, Vectorial Mechanics, Partial and Ordinary Differential Equations, Topology.
               </p>
-              <p class="timeline-text">
+              <p class="timeline-text" data-i18n data-en="&gt; Thesis: &lt;a href=&#x27;https://hdl.handle.net/20.500.14330/TES01000824833&#x27; target=&#x27;_blank&#x27; rel=&#x27;noopener&#x27;&gt;Morse Homology and its Applications&lt;/a&gt;." data-es="&gt; Tesis: &lt;a href=&#x27;https://hdl.handle.net/20.500.14330/TES01000824833&#x27; target=&#x27;_blank&#x27; rel=&#x27;noopener&#x27;&gt;Homología de Morse y sus Aplicaciones&lt;/a&gt;.">
                 > Thesis: <a href="https://hdl.handle.net/20.500.14330/TES01000824833" target="_blank" rel="noopener">Morse Homology and its Applications</a>.
               </p>
 
@@ -710,7 +717,7 @@
       <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title" data-i18n data-en="Portfolio" data-es="Portafolio">Portfolio</h2>
         </header>
 
         <section class="projects">
@@ -718,19 +725,19 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn data-i18n data-en="All" data-es="Todos">All</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Machine Learning</button>
+              <button data-filter-btn data-i18n data-en="Machine Learning" data-es="Machine Learning">Machine Learning</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Data Analysis and GIS</button>
+              <button data-filter-btn data-i18n data-en="Data Analysis and GIS" data-es="Análisis de Datos y SIG">Data Analysis and GIS</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn data-i18n data-en="Web development" data-es="Desarrollo Web">Web development</button>
             </li>
 
           </ul>

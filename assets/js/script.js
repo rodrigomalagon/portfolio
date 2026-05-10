@@ -168,3 +168,71 @@ if (homeLink) {
     setActivePage("about");
   });
 }
+
+
+// ============================================================
+// i18n — Language selector EN / ES
+// ============================================================
+
+(function () {
+  // Default language
+  const DEFAULT_LANG = 'en';
+  const STORAGE_KEY = 'portfolio_lang';
+
+  // Get initial language from localStorage or browser preference
+  function getInitialLang() {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) return stored;
+    const browser = navigator.language?.slice(0, 2).toLowerCase();
+    return browser === 'es' ? 'es' : DEFAULT_LANG;
+  }
+
+  // Apply language to all elements marked with data-i18n
+  function applyLang(lang) {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text) {
+        // Use textContent for plain text, innerHTML for elements with nested tags
+        if (el.innerHTML === el.textContent) {
+          // Pure text content
+          el.textContent = text;
+        } else {
+          // Has nested HTML
+          el.innerHTML = text;
+        }
+      }
+    });
+
+    const cvLinks = document.querySelectorAll('[data-cv-link]');
+    cvLinks.forEach(link => {
+      const nextHref = link.getAttribute(`data-cv-${lang}`);
+      if (nextHref) {
+        link.setAttribute('href', nextHref);
+      }
+    });
+
+    // Update language button label
+    const btn = document.getElementById('lang-current');
+    if (btn) btn.textContent = lang.toUpperCase();
+
+    // Save preference
+    localStorage.setItem(STORAGE_KEY, lang);
+
+    // Update html lang attribute for accessibility
+    document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+  }
+
+  // Initialize
+  let currentLang = getInitialLang();
+  applyLang(currentLang);
+
+  // Event listener for toggle button
+  const toggle = document.getElementById('lang-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      applyLang(currentLang);
+    });
+  }
+})();

@@ -1,4 +1,7 @@
 ﻿# Carpetas internas
 internal_documentation/
 
+# Phase 4 data (not ready for production)
+assets/data/
+
 

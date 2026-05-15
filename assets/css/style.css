@@ -1186,7 +1186,14 @@ main {
   margin-bottom: 10px;
 }
 
-.project-item { display: none; }
+.project-item { 
+  display: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
 
 .project-item.active {
   display: block;
@@ -1274,7 +1281,9 @@ main {
 }
 
 .project-description-text {
-  margin-left: 10px; 
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0.5rem;
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
@@ -2073,10 +2082,36 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /* Styles for interactive map */
-#madrid-map {
-  height: 300px;
+.project-map {
+  height: 200px;
   border-radius: 8px;
-  margin: 1rem 0;
+  margin: 0.5rem 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden !important;
+  box-sizing: border-box;
+  width: calc(100% - 20px);
+  display: block;
+  flex-shrink: 0;
+}
+
+#madrid-map {
+  width: 100% !important;
+  height: 200px !important;
+  border-radius: 8px;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  max-height: 200px !important;
+}
+
+/* Force Leaflet controls to stay inside */
+.leaflet-control-container {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
 }
 
 /* Styles for image comparison slider */

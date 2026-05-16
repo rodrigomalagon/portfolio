@@ -19,12 +19,10 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <!--
-    - Leaflet.js for interactive maps (Phase 4 - commented until ready)
+    - Leaflet.js for interactive maps (Phase 4)
   -->
-  <!-- PHASE4-MAP-START
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
-  PHASE4-MAP-END -->
 
   <!--
     - google font link
@@ -846,10 +844,19 @@
                   </p>
                 </div>
 
-                <!-- Interactive Leaflet map for pollution data -->
-                <!-- PHASE4-MAP-START
-                <div id="madrid-map" class="project-map"></div>
-                PHASE4-MAP-END -->
+                <div class="project-map-actions">
+                  <button
+                    class="btn project-map-expand-btn"
+                    type="button"
+                    data-map-expand-btn
+                    data-i18n
+                    data-en="Expand map"
+                    data-es="Expandir mapa"
+                    aria-haspopup="dialog"
+                    aria-controls="map-modal-container">
+                    Expand map
+                  </button>
+                </div>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="machine learning">
@@ -1013,6 +1020,23 @@
     </div>
 
   </main>
+
+
+  <div class="map-modal-container" data-map-modal-container id="map-modal-container" aria-hidden="true">
+    <div class="map-modal-overlay" data-map-modal-overlay></div>
+
+    <section class="map-modal" role="dialog" aria-modal="true" aria-labelledby="map-modal-title">
+      <button class="map-modal-close-btn" type="button" data-map-modal-close-btn aria-label="Close map">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <h3 class="h3 map-modal-title" id="map-modal-title" data-i18n data-en="Madrid interactive map" data-es="Mapa interactivo de Madrid">
+        Madrid interactive map
+      </h3>
+
+      <div id="madrid-map-modal" class="madrid-map-modal" aria-label="Interactive map centered on Madrid"></div>
+    </section>
+  </div>
 
 
 

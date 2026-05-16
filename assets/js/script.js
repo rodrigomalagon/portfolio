@@ -305,7 +305,7 @@ if (homeLink) {
         { min: 0, max: 26.99, color: '#91bfdb', label: '< 27 µg/m³' }
       ];
 
-      let html = '<strong style="display: block; margin-bottom: 8px;">NO₂ Mean Pollution</strong>';
+      let html = '<strong style="display: block; margin-bottom: 8px;">NO₂ Mean Pollution (2023)</strong>';
       ranges.forEach(range => {
         html += `
           <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">

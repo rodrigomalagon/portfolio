@@ -1738,8 +1738,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   .info-content .title { padding: 5px 18px; }
 
   .info_more-btn {
-    top: -30px;
-    right: -30px;
+    top: -10px;
+    right: -10px;
     padding: 10px 15px;
   }
 
@@ -2086,6 +2086,54 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .blog-banner-box { height: 230px; }
 
+}
+
+
+
+
+
+/**
+ * responsive between 580px and 1249px screen
+ */
+
+@media (min-width: 580px) and (max-width: 1249px) {
+
+  /* Keep the sidebar compact in collapsed state, matching mobile behavior. */
+  .sidebar {
+    width: auto;
+    padding: 15px;
+    margin-bottom: 15px;
+    max-height: 152px;
+  }
+
+  .sidebar.active { max-height: 760px; }
+
+  .sidebar-info {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .avatar-box img {
+    width: 72px;
+    border-radius: 10%;
+  }
+
+  .info-content .name {
+    font-size: var(--fs-4);
+    margin-bottom: 6px;
+  }
+
+  .info-content .title {
+    margin: 0.25rem 0 0;
+    text-align: left;
+    padding: 3px 12px;
+  }
+
+  .sidebar:not(.active) .tagline,
+  .sidebar:not(.active) .hero-cta,
+  .sidebar:not(.active) .sidebar-lang-btn {
+    display: none;
+  }
 }
 
 
